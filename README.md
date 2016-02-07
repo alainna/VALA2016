@@ -213,7 +213,7 @@ Section 2: Getting started with the ORCID member API
     <li><strong>Header name:</strong> Accept</li>
     <li><strong>Header value:</strong> application/vnd.orcid+xml</li><br />&nbsp;
   </ul>
-  <li><img src="http://alainna.org/orcid/clip_image016.jpg" alt="" width="308" height="211" align="right" hspace="12" />In the <strong>Request  URI</strong> field, enter  https://pub.sandbox.orcid.org/v1.2/[orcid-id]/orcid-profile, replacing  [orcid-id] with the ORCID iD of the Sandbox record that you created earlier  (ex: https://api.sandbox.orcid.org/v1.2/0000-0002-1223-3173/orcid-profile).<br />
+  <li><img src="http://alainna.org/orcid/clip_image016.jpg" alt="" width="308" height="211" align="right" hspace="12" />In the <strong>Request  URI</strong> field, enter  https://pub.sandbox.orcid.org/v1.2/[orcid-id]/orcid-profile, replacing  [orcid-id] with the ORCID iD of the Sandbox record that you created earlier  (ex: https://pub.sandbox.orcid.org/v1.2/0000-0002-1223-3173/orcid-profile).<br />
     &nbsp;
   </li>
   <li>Leave the Request Body and Content-Type fields blank,  and click <strong>Send the request</strong>.<br />&nbsp;
