@@ -11,7 +11,7 @@ Section 1: What is the ORCID API? Using the ORCID Public API
 Section 2: Getting started with the ORCID member API
 * Accessing the Member API
 * Getting permission to edit users’ ORCID records via OAuth
-* Reading from/writing to users’ ORDCID records via the Member API
+* Reading from/writing to users’ ORCID records via the Member API
 
 <p>This workshop requires a laptop. All skill levels are welcome; software development experience is not required.</p>
 --
