@@ -526,7 +526,7 @@ Section 2: Getting started with the ORCID member API
     <li><strong>Header value:</strong> application/vnd.orcid+xml<br />&nbsp; </li>
   </ul>
   <li>Click <strong>Add</strong> again, then click <strong>Close</strong>.<br />&nbsp; </li>
-  <li>In  the <strong>Request URI </strong>field, enter  https://api.sandbox.orcid.org/1.2/[orcid-id]/orcid-works, replacing [orcid-id]  with the ORCID iD of your Sandbox record (ex:  https://api.sandbox.orcid.org/v1.2/0000-0002-1223-3173/orcid-works). <br />&nbsp; 
+  <li>In  the <strong>Request URI </strong>field, enter  https://api.sandbox.orcid.org/v1.2/[orcid-id]/orcid-works, replacing [orcid-id]  with the ORCID iD of your Sandbox record (ex:  https://api.sandbox.orcid.org/v1.2/0000-0002-1223-3173/orcid-works). <br />&nbsp; 
   </li>
   <li>Click <strong>Enter request body</strong>. This is where you&rsquo;ll  enter the XML for the work that you wish to edit.<br />&nbsp; </li>
   <li>Visit <a href="http://git.io/vITI9" target="_blank">http://git.io/vITI9</a> and copy the XML in the <strong>Sample Work  Updated </strong>section.<br />&nbsp; 
