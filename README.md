@@ -489,7 +489,7 @@ Section 2: Getting started with the ORCID member API
     <li><strong>Header value:</strong> application/vnd.orcid+xml<br />&nbsp; </li>
   </ul>
   <li>Click <strong>Add</strong> again, then click <strong>Close</strong>.<br />&nbsp; </li>
-  <li>In the <strong>Request  URI</strong> field, enter https://api.sandbox.orcid.org/1.2/[orcid-id]/orcid-works,  replacing [orcid-id] with the ORCID iD of the Sandbox record that you created earlier  (ex: https://api.sandbox.orcid.org/v1.2/0000-0002-1223-3173/orcid-works)<br />
+  <li>In the <strong>Request  URI</strong> field, enter https://api.sandbox.orcid.org/v1.2/[orcid-id]/orcid-works,  replacing [orcid-id] with the ORCID iD of the Sandbox record that you created earlier  (ex: https://api.sandbox.orcid.org/v1.2/0000-0002-1223-3173/orcid-works)<br />
     <br />
     <img src="http://alainna.org/orcid/clip_image042.jpg" alt="" width="392" height="165" border="0" /><br />&nbsp; </li>
   <li>Click <strong>Enter  request body</strong>. Here is where you&rsquo;ll enter the XML for the works you wish to  add.<br />&nbsp; </li>
