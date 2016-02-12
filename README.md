@@ -364,11 +364,11 @@ Section 2: Getting started with the ORCID member API
   </tr>
   <tr>
     <td width="162" valign="top"><p><strong>OAuth Client ID</strong></p></td>
-    <td width="263" valign="top"><p>Your Public API client id    (ex: APP-F6TMYF419CVYMSNE)</p></td>
+    <td width="263" valign="top"><p>Your Public API client id    (ex: APP-AWPNRAQNO2Y0K3AC)</p></td>
   </tr>
   <tr>
     <td width="162" valign="top"><p><strong>OAuth Client Secret</strong></p></td>
-    <td width="263" valign="top"><p>Your Public API client    secret (ex: f40a4c7d-2306-44f1-b8af-a0e464e2bc37)</p></td>
+    <td width="263" valign="top"><p>Your Public API client    secret (ex: 63a7f233-2277-4364-9745-4d5f4b5a0360)</p></td>
   </tr>
 </table><br />&nbsp;
   <li>The configuration screen should look similar to the  image at right. After you&rsquo;ve entered the settings, click Close in the  lower-left corner of the configuration screen.<br />
@@ -434,11 +434,11 @@ Section 2: Getting started with the ORCID member API
   </tr>
   <tr>
     <td width="158" valign="top"><p><strong>OAuth Client ID</strong></p></td>
-    <td valign="top"><p><strong>Your Member API client ID</strong> (ex: APP-F6TMYF419CVYMSNE)</p></td>
+    <td valign="top"><p><strong>Your Member API client ID</strong> (ex: APP-E422WM33OPZWKKMQ)</p></td>
   </tr>
   <tr>
     <td width="158" valign="top"><p><strong>OAuth Client Secret</strong></p></td>
-    <td valign="top"><p><strong>Your Member API client secret</strong> (ex:    f40a4c7d-2306-44f1-b8af-a0e464e2bc37)</p></td>
+    <td valign="top"><p><strong>Your Member API client secret</strong> (ex:    ae857cfb-446b-4c3f-8a09-55436bf602dc)</p></td>
   </tr>
 </table><br  />&nbsp;</li>
   <li>The configuration screen should look similar to the  image at right. After you&rsquo;ve entered the settings, click <strong>Close</strong> in the lower left corner of the configuration screen.</li>
@@ -569,7 +569,7 @@ Section 2: Getting started with the ORCID member API
   <table border="1" cellspacing="0" cellpadding="0" width="611">
     <tr>
       <td width="158" valign="top"><strong>client_id</strong></td>
-      <td width="453" valign="top"><p>Your Member API client ID    (ex: APP-F6TMYF419CVYMSNE)</p></td>
+      <td width="453" valign="top"><p>Your Member API client ID    (ex: APP-E422WM33OPZWKKMQ)</p></td>
     </tr>
     <tr>
       <td width="158" valign="top"><p><strong>scope</strong></p></td>
@@ -591,7 +591,7 @@ Section 2: Getting started with the ORCID member API
 <ol>
   <li>In your text editor, add the required parameters to  your base URL, as in the example below. Make sure to replace the Client ID with  your assigned Client ID!</li>
 <p><strong>https://sandbox.orcid.org/oauth/authorize?<br />
-  client_id=APP-F6TMYF419CVYMSNE&amp;<br />
+  client_id=APP-E422WM33OPZWKKMQ&amp;<br />
   scope=/orcid-works/create%20/orcid-works/update&amp;<br />
   response_type=code&amp;<br />
   redirect_uri=https://developers.google.com/oauthplayground</strong></p>
@@ -631,7 +631,7 @@ Section 2: Getting started with the ORCID member API
 <ol>
   <li><img width="195" height="119" src="http://alainna.org/orcid/clip_image047.gif" align="right" hspace="12" vspace="5" alt="Text Box: IMPORTANT!." />In your text editor, add some  optional parameters to pre-fill the registration form. Your final authorization  URL should like something like:</li>
 <p><strong>https://sandbox.orcid.org/oauth/authorize?<br />
-  client_id=APP-F6TMYF419CVYMSNE&amp;<br />
+  client_id=APP-E422WM33OPZWKKMQ&amp;<br />
   scope=/orcid-works/create%20/orcid-works/update&amp;<br />
   response_type=code&amp;<br />
   redirect_uri=https://developers.google.com/oauthplayground&amp;<br />
@@ -704,11 +704,11 @@ Section 2: Getting started with the ORCID member API
     </tr>
     <tr>
       <td width="158" valign="top"><p><strong>OAuth Client ID</strong></p></td>
-      <td width="412" valign="top"><p>Your Member API client ID    (ex: APP-F6TMYF419CVYMSNE)</p></td>
+      <td width="412" valign="top"><p>Your Member API client ID    (ex: APP-E422WM33OPZWKKMQ)</p></td>
     </tr>
     <tr>
       <td width="158" valign="top"><p><strong>OAuth Client Secret</strong></p></td>
-      <td width="412" valign="top"><p>Your Member API client    secret (ex: f40a4c7d-2306-44f1-b8af-a0e464e2bc37)</p></td>
+      <td width="412" valign="top"><p>Your Member API client    secret (ex: ae857cfb-446b-4c3f-8a09-55436bf602dc)</p></td>
     </tr>
   </table><br />&nbsp;
   <li>Click <strong>Close</strong> in the lower left corner of the configuration screen.<br  />&nbsp;</li>
