@@ -15,10 +15,6 @@ Section 2: Getting started with the ORCID member API
 
 <p>This workshop requires a laptop. All skill levels are welcome; software development experience is not required.</p>
 --
-## Related files: 
-* <a href="https://github.com/alainna/VALA2016/blob/master/VALA2016-ORCID%20API%20Boot%20Camp.pdf">Download the PDF of the full boot camp manual, including bonus exercises.</a>
-
---
 <h1><a name="top"></a>Contents</h1>
 <p><a href="#1">1. About the ORCID APIs</a></p>
 <blockquote>
@@ -43,30 +39,30 @@ Section 2: Getting started with the ORCID member API
     <p><a href="#3.2.4">3.2.4. More searches to try!</a></p>
   </blockquote>
 </blockquote>
-<p><a href="#4">4. BONUS: Public API:  Getting Authenticated ORCID iDs</a></p>
+<p><a href="#4">4. Public API:  Getting Authenticated ORCID iDs</a></p>
 <blockquote>
   <p><a href="#4.1">4.1  OAuth Introduction</a></p>
   <p><a href="#4.2">4.2  Setting up the OAuth Playground</a></p>
   <p><a href="#4.3">4.3  Get an Authorization Code</a></p>
-  <p><a href="#4.4">4.4  Exchange the Authorization Code for  the User&rsquo;s ORCID iD</a></p>
+  <p><a href="#4.4">4.4  Exchange the Authorization Code for the User&rsquo;s ORCID iD</a></p>
 </blockquote>
-<p><a href="#5">5. Member API: Access to  amend ORCID records</a></p>
+<p><a href="#5">5. Member API: Access to amend ORCID records</a></p>
 <blockquote>
   <p><a href="#5.1">5.1  Accessing the Sandbox Member API</a></p>
   <p><a href="#5.2">5.2  Setting up the OAuth Playground</a></p>
 </blockquote>
-<p><a href="#6">6. Member API: Getting  permission to edit ORCID records</a></p>
+<p><a href="#6">6. Member API: Getting permission to edit ORCID records</a></p>
 <p><a href="#6.1">6.1  Obtaining Access Tokens</a></p>
 <blockquote>
   <p><a href="#6.1.1">6.1.1 Get an Authorization  Code</a></p>
-  <p><a href="#6.1.2">6.1.2 Exchange the  Authorization Code for an Access Token</a></p>
+  <p><a href="#6.1.2">6.1.2 Exchange the Authorization Code for an Access Token</a></p>
 </blockquote>
-<p><a href="#7">7. Member API: Writing to  ORCID records via the API</a></p>
+<p><a href="#7">7. Member API: Writing to ORCID records via the API</a></p>
 <blockquote>
   <p><a href="#7.1">7.1  Adding a New Work to an ORCID Record</a></p>
   <p><a href="#7.2">7.2  Updating a Work</a></p>
 </blockquote>
-<p><a href="#8">8. BONUS: Member API:  Creating New Records</a></p>
+<p><a href="#8">8. Member API: Creating New Records</a></p>
 <blockquote>
   <p><a href="#8.1">8.1  Construct the Authorization URL</a></p>
   <blockquote>
@@ -87,7 +83,7 @@ Section 2: Getting started with the ORCID member API
 <table border="1" cellspacing="0" cellpadding="0" width="680">
   <tr>
     <td width="95" valign="top"><br />
-      <strong>API    Version</strong></td>
+      <strong>API Version</strong></td>
     <td width="172" valign="top"><p><strong>Access</strong></p></td>
     <td width="413" valign="top"><p><strong>Features</strong></p></td>
   </tr>
@@ -95,12 +91,14 @@ Section 2: Getting started with the ORCID member API
     <td width="95" valign="top"><p>Public API</p></td>
     <td width="172" valign="top"><p>Freely available to anyone</p></td>
     <td width="413" valign="top"><p><strong>Authenticate:</strong> Obtain a user&rsquo;s authenticated ORCID iD<br />
-      <strong>Read    (Public)</strong>:<strong> </strong>Search/retrieve public data</p></td>
+      <strong>Read    (Public)</strong>:<strong> </strong>Search/retrieve public data<br />
+      <strong>Create:</strong> Create new ORCID records on demand</p>
+	</td>
   </tr>
   <tr>
     <td width="95" valign="top"><p>Member API</p></td>
-    <td width="172" valign="top"><p>Available to organizations that support ORCID with    an annual membership subscription</p></td>
-    <td width="413" valign="top"><p><strong>Read    (Limited): </strong>Search/retrieve    &quot;limited-access&quot; data<br />
+    <td width="172" valign="top"><p>Available to organizations that support ORCID with    an annual membership subscription<br /><i>Sandbox Member API freely available to all for testing</i></p></td>
+    <td width="413" valign="top"><p><strong>Read    (Limited): </strong>Search/retrieve    limited-access data<br />
       <strong>Add</strong>:<strong> </strong>Post    new items to a record (affiliations, works, etc.)<br />
       <strong>Update</strong>:<strong> </strong>Edit or    delete items you previously added<br />
       <strong>Create:</strong> Create new ORCID records (on demand)</p></td>
@@ -139,11 +137,11 @@ Section 2: Getting started with the ORCID member API
   <li>Software capable of making HTTP requests:</li>
   <ul>
     <li>cURL: free, command-line application available for Mac  or Windows at <a href="http://curl.haxx.se/download.html">http://curl.haxx.se/download.html</a> (pre-installed on most Mac OS versions; accessible within Terminal application)<br />&nbsp;</li>
-    <li>Online tools, e.g. hurl.it or Google OAuth Playground<br />&nbsp;</li>
+    <li>Online tools, e.g. <a href="http://hurl.it">hurl.it</a> or <a href="https://developers.google.com/oauthplayground/">Google OAuth Playground</a><br />&nbsp;</li>
     <li>Your own web application, in a language such as Java,  Ruby, Python, PHP, etc.</li>
   </ul>
 </ol>
-<p>For this boot camp, we will  be using the online tool Google OAuth Playground.</p>
+<p>For this boot camp, we will  be using the online tool <a href="https://developers.google.com/oauthplayground/">Google OAuth Playground</a>.</p>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 <h1><a name="2"></a>2. Public API: Searching &amp; Retrieving ORCID Records</h1>
 <h2><img width="194" height="336" src="http://alainna.org/orcid/clip_image002.gif" align="right" hspace="12" vspace="12" alt="Screen Shot 2015-06-04 at 4.43.26 PM.png" /><a name="_2.1_Create_a" id="_2.1_Create_a"></a>2.1 Create a  Sandbox User Account</h2>
