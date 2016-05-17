@@ -1,19 +1,7 @@
 # VALA2016 ORCID Boot Camp
 ## Hands on with the ORCID API 
 
-This bootcamp provides a hands-on tutorial for using the ORCID Member and Public APIs. After a brief introduction to ORCID and how to encourage your researchers to get and use an ORCID iD, the workshop will be divided into two sections:
-
-Section 1: What is the ORCID API? Using the ORCID Public API
-* About the ORCID APIs
-* Accessing the Public API
-* Using the Public API (searching ORCID records, getting an authenticated ORCID iD)
-
-Section 2: Getting started with the ORCID member API
-* Accessing the Member API
-* Getting permission to edit users’ ORCID records via OAuth
-* Reading from/writing to users’ ORDCID records via the Member API 
-
-<p>This workshop requires a laptop. All skill levels are welcome; software development experience is not required.</p>
+<p>This boot camp provides a hands-on tutorial for using the ORCID Member and Public APIs. </p>
 --
 <h1><a name="top"></a>Contents</h1>
 <p><a href="#1">1. About the ORCID APIs</a></p>
@@ -91,27 +79,26 @@ Section 2: Getting started with the ORCID member API
     <td width="95" valign="top"><p>Public API</p></td>
     <td width="172" valign="top"><p>Freely available to anyone</p></td>
     <td width="413" valign="top"><p><strong>Authenticate:</strong> Obtain a user&rsquo;s authenticated ORCID iD<br />
-      <strong>Read    (Public)</strong>:<strong> </strong>Search/retrieve public data<br />
+      <strong>Read (Public)</strong>:<strong> </strong>Search/retrieve public data<br />
       <strong>Create:</strong> Create new ORCID records on demand</p>
 	</td>
   </tr>
   <tr>
     <td width="95" valign="top"><p>Member API</p></td>
-    <td width="172" valign="top"><p>Available to organizations that support ORCID with    an annual membership subscription<br /><i>Sandbox Member API freely available to all for testing</i></p></td>
-    <td width="413" valign="top"><p><strong>Read    (Limited): </strong>Search/retrieve    limited-access data<br />
-      <strong>Add</strong>:<strong> </strong>Post    new items to a record (affiliations, works, etc.)<br />
-      <strong>Update</strong>:<strong> </strong>Edit or    delete items you previously added<br />
-      <strong>Create:</strong> Create new ORCID records (on demand)</p></td>
+    <td width="172" valign="top"><p>Available to organizations that support ORCID with an annual membership subscription<br /><i>Sandbox Member API freely available to all for testing</i></p></td>
+    <td width="413" valign="top"><p><strong>Read (Limited)</strong>: Search/retrieve limited-access data<br />
+      <strong>Add</strong>: Post new items to a record (affiliations, works, etc.)<br />
+      <strong>Update</strong>: Edit or delete items you previously added</p></td>
   </tr>
 </table>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 <h2><a name="1.2"></a>1.2 Sandbox  Test Environment</h2>
-<p>In addition to the  production Registry and APIs, ORCID also offers a testing environment, the  ORCID Sandbox, which we will be using for this boot camp. The Sandbox is open  to all users and provides a place to develop and test applications without  affecting data in the live ORCID registry.</p>
+<p>In addition to the  production Registry and APIs, ORCID also offers a testing environment, the ORCID Sandbox, which we will be using for this boot camp. The Sandbox is open  to all users and provides a place to develop and test applications without affecting data in the live ORCID registry.</p>
 <p> The Sandbox includes:</p>
 <ul>
-  <li><strong><a href="https://sandbox.orcid.org/signin" target="_blank">Sandbox Registry</a></strong><strong>:</strong> Simulates the ORCID Registry <br />&nbsp;</li>
-  <li><strong>Sandbox Member  API:</strong> Simulates the Member API<br />&nbsp;</li>
-  <li><strong>Sandbox Public  API:</strong> Simulates the Public API</li>
+  <li><strong><a href="https://sandbox.orcid.org/signin" target="_blank">Sandbox Registry</a></strong>: Simulates the ORCID Registry <br />&nbsp;</li>
+  <li><strong><a href="http://members.orcid.org/api/introduction-orcid-member-api">Sandbox Member API</a></strong>: Simulates the Member API<br />&nbsp;</li>
+  <li><strong><a href="http://members.orcid.org/api/introduction-orcid-public-api">Sandbox Public API</a></strong>: Simulates the Public API</li>
 </ul>
 <p>The sandbox behaves the same  way as the production ORCID Registry with a few exceptions: </p>
 <ul>
@@ -123,17 +110,17 @@ Section 2: Getting started with the ORCID member API
 <h2><a name="1.3"></a>1.3 ORCID  API Technologies</h2>
 <p>All of the ORCID APIs are  based on the same set of technologies:</p>
 <ol>
-  <li><strong>REST: </strong>ORCID APIs are &ldquo;RESTful,&rdquo; which  means that they use HTTP (hyper-text transfer) calls to transfer information.<br />&nbsp;</li>
+  <li><strong>REST: </strong>ORCID APIs are &ldquo;RESTful&rdquo;, which  means that they use HTTP (hyper-text transfer) calls to transfer information.<br />&nbsp;</li>
   <li><strong>OAuth:</strong> ORCID  APIs use the OAuth 2.0 authentication protocol in order to grant client  applications access to users&rsquo; ORCID records.<br />&nbsp;</li>
-  <li><strong>XML/JSON:</strong> ORCID APIs support data  exchange in either XML or JSON format.</li>
+  <li><strong>XML/JSON:</strong> ORCID APIs support data exchange in either XML or JSON format.</li>
 </ol>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 <h2><a name="1.4"></a>1.4 ORCID  API Tools</h2>
 <p>In order to use the ORCID  APIs you will need the following software tools:</p>
 <ol>
-  <li>Web browser: Firefox (33+), Chrome (38+), Internet  Explorer (10+), Safari (6+)<br />&nbsp;</li>
+  <li>Web browser: Firefox (33+), Chrome (38+), Internet Explorer (10+), Safari (6+)<br />&nbsp;</li>
   <li>Internet connection<br />&nbsp;</li>
-  <li>Plain text editor: TextEdit (Mac), Notepad++ (Win), or  your preferred plain text editor<br />&nbsp;</li>
+  <li>Plain text editor: TextEdit (Mac), Notepad++ (Win), or your preferred plain text editor<br />&nbsp;</li>
   <li>Software capable of making HTTP requests:</li>
   <ul>
     <li>cURL: free, command-line application available for Mac  or Windows at <a href="http://curl.haxx.se/download.html">http://curl.haxx.se/download.html</a> (pre-installed on most Mac OS versions; accessible within Terminal application)<br />&nbsp;</li>
@@ -200,7 +187,7 @@ Section 2: Getting started with the ORCID member API
 </ol>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 <h1><a name="3"></a>3. Public API: Searching &amp; Retrieving ORCID Records</h1>
-<h2><a name="3.1"></a>3.1  Retrieving Public Record Data</h2>
+<h2><a name="3.1"></a>3.1 Retrieving Public Record Data</h2>
 <p>Using the Public API, you  can retrieve the XML version of any user&rsquo;s public ORCID record. This is same  information that you&rsquo;ll see by viewing a record in the user interface of the  ORCID registry, but in machine-readable XML format. In a real-world web  application, this process can be used to retrieve and copy information from  ORCID records into your own system.</p>
 <ol>
   <li><img src="http://alainna.org/orcid/clip_image014.gif" alt="" width="239" height="113" align="right" hspace="12" vspace="12" />Visit <a href="https://developers.google.com/oauthplayground/">https://developers.google.com/oauthplayground/</a><br />&nbsp;</li>
@@ -211,18 +198,18 @@ Section 2: Getting started with the ORCID member API
     <li><strong>Header name:</strong> Accept</li>
     <li><strong>Header value:</strong> application/vnd.orcid+xml</li><br />&nbsp;
   </ul>
-  <li><img src="http://alainna.org/orcid/clip_image016.jpg" alt="" width="308" height="211" align="right" hspace="12" />In the <strong>Request  URI</strong> field, enter  https://pub.sandbox.orcid.org/v1.2/[orcid-id]/orcid-profile, replacing  [orcid-id] with the ORCID iD of the Sandbox record that you created earlier  (ex: https://pub.sandbox.orcid.org/v1.2/0000-0002-1223-3173/orcid-profile).<br />
+  <li><img src="http://alainna.org/orcid/clip_image016.jpg" alt="" width="315" height="185" align="right" hspace="12" />In the <strong>Request URI</strong> field, enter  https://pub.sandbox.orcid.org/v1.2/[orcid-id]/orcid-profile, replacing  [orcid-id] with the ORCID iD of the Sandbox record that you created earlier  (ex: https://pub.sandbox.orcid.org/v1.2/0000-0002-1223-3173/orcid-profile).<br />
     &nbsp;
   </li>
   <li>Leave the Request Body and Content-Type fields blank,  and click <strong>Send the request</strong>.<br />&nbsp;
   </li>
-  <li>The XML for the ORCID record that you requested will  appear in the <strong>Request/Response</strong> section on the right side of the screen.<p><img src="http://alainna.org/orcid/clip_image017.jpg" alt="" width="510" height="209" border="0" /></p></li><br />&nbsp;
+  <li>The XML for the ORCID record that you requested will  appear in the <strong>Request/Response</strong> section on the right side of the screen.<p><img src="http://alainna.org/orcid/clip_image017.jpg" alt="" width="700" height="297" border="0" /></p></li><br />&nbsp;
 </ol>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 <h2><a name="3.2"></a>3.2 Searching  Public Record Data</h2>
 <p>In addition to retrieving  an individual&rsquo;s entire ORCID record, the Public API can be used to search for  all records whose public data contain particular search terms.</p>
 <p> Note that only a portion of  the ORCID record is returned for each matching result. To view the entire record,  use the Public API to retrieve the record, as in section 3.1.</p>
-<p> This tutorial provides a  very brief introduction to searching with the API. For much more information,  see <a href="http://members.orcid.org/api/tutorial-searching-api-12-and-earlier">http://members.orcid.org/api/tutorial-searching-api-12-and-earlier</a></p>
+<p> This tutorial provides a  very brief introduction to searching with the API. For much more information,  see <a href="https://members.orcid.org/api/tutorial-searching-api-12-and-earlier">https://members.orcid.org/api/tutorial-searching-api-12-and-earlier</a></p>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 <h3><a name="3.2.1"></a>3.2.1 Basic  Keyword Search</h3>
 <p>A basic keyword search  performs a full-text search of all publicly-visible information in users&rsquo; ORCID  records (Names, ORCID iDs, and any other data with a privacy setting of  &ldquo;Everyone&rdquo;).</p>
@@ -236,13 +223,13 @@ Section 2: Getting started with the ORCID member API
   </tr>
   <tr>
     <td width="101" valign="top"><p><strong>Add Headers</strong></p></td>
-    <td width="475" valign="top"><p>Header    name: Accept<br />
+    <td width="475" valign="top"><p>Header name: Accept<br />
       Header value: application/vnd.orcid+xml</p></td>
   </tr>
   <tr>
     <td width="101" valign="top"><p><strong>Request URI</strong></p></td>
-    <td width="475" valign="top"><p>http://pub.sandbox.orcid.org/v1.2/search/orcid-bio?q=newman<br />
-      <em>Searches for records with the term    &ldquo;newman&rdquo; in any field</em></p></td>
+    <td width="475" valign="top"><p><a href="https://pub.sandbox.orcid.org/v1.2/search/orcid-bio?q=newman">https://pub.sandbox.orcid.org/v1.2/search/orcid-bio?q=newman</a><br />
+      <em>Searches for records with the term &ldquo;newman&rdquo; in any field</em></p></td>
   </tr>
 </table>
   <li>Leave the Request Body and Content-Type fields blank,  and click <strong>Send the request</strong>.<br />&nbsp;</li>
@@ -267,16 +254,16 @@ Section 2: Getting started with the ORCID member API
     <td width="101" valign="top"><p><strong>Request URI</strong></p></td>
     <td width="475" valign="top"><p>http://pub.sandbox.orcid.org/v1.2/search/orcid-bio?q=michael+AND(hkbu+OR+&quot;Hong+Kong+Baptist+University&quot;)<br />
       <br />
-      <em>Searches for records with the term    &ldquo;michael&rdquo; and &ldquo;hkbu&rdquo; or &ldquo;Hong Kong Baptist University&rdquo; in any field</em>.</p></td>
+      <em>Searches for records with the term &ldquo;michael&rdquo; and &ldquo;hkbu&rdquo; or &ldquo;Hong Kong Baptist University&rdquo; in any field</em>.</p></td>
   </tr>
 </table><br />&nbsp;
-  <li>Leave the Request Body and Content-Type fields blank,  and click <strong>Send the Request</strong>.<br />&nbsp;</li>
+  <li>Leave the Request Body and Content-Type fields blank   and click <strong>Send the Request</strong>.<br />&nbsp;</li>
   <li>XML for matching records appears in the <strong>Request/Response</strong> section on the right.</li>
 </ol>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 <h3><a name="3.2.3"></a>3.2.3  Fielded search</h3>
-<p>For more specific results,  search for terms in particular record fields rather than entire ORCID records. </p>
-<p> Available search fields  include:</p>
+<p>For more specific results, search for terms in particular record fields rather than entire ORCID records. </p>
+<p> Available search fields include:</p>
 <ul>
   <li>ORCID iD</li>
   <li>Names (Given Names, Family Name, Credit Name, Other  Names)</li>
@@ -300,18 +287,18 @@ Section 2: Getting started with the ORCID member API
   </tr>
   <tr>
     <td width="101" valign="top"><p><strong>Request URI</strong></p></td>
-    <td width="475" valign="top"><p>http://pub.sandbox.orcid.org/v1.2/search/orcid-bio/?q=family-name:Sanchez<br />
-      <em>Searches for ORCID records with the    term &ldquo;sanchez&rdquo; in Family (Last) Name </em></p></td>
+    <td width="475" valign="top"><p>https://pub.sandbox.orcid.org/v1.2/search/orcid-bio/?q=family-name:Sanchez<br />
+      <em>Searches for ORCID records with the term &ldquo;sanchez&rdquo; in Family (Last) Name </em></p></td>
   </tr>
 </table><br />&nbsp;
-  <li>Leave the Request Body and Content-Type fields blank,  and click <strong>Send the request</strong>.<br />&nbsp;</li>
+  <li>Leave the Request Body and Content-Type fields blank, and click <strong>Send the request</strong>.<br />&nbsp;</li>
   <li>XML for matching records appears in the <strong>Request/Response</strong> section on the right.</li>
 </ol>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 <h3><a name="3.2.4"></a>3.2.4. More  searches to try!</h3>
 <ol>
   <li><strong>Search for  records associated with the exact DOI 10.1087/20120404:</strong><br />
-    http://pub.sandbox.orcid.org/v1.2/search/orcid-bio/?q=digital-object-ids:%2210.1087/20120404%22<br />&nbsp;</li>
+    https://pub.sandbox.orcid.org/v1.2/search/orcid-bio/?q=digital-object-ids:%2210.1087/20120404%22<br />&nbsp;</li>
   <li><strong>Search for  records modified between May 6, 2015 and today:</strong><br />
     https://pub.sandbox.orcid.org/search/orcid-bio?q=profile-last-modified-date:%5B2015-05-06T00:00:00Z%20TO%20NOW%5D</li>
 </ol>
@@ -338,7 +325,7 @@ Section 2: Getting started with the ORCID member API
 </ol>
 <p><img src="http://alainna.org/orcid/clip_image019.jpg" alt="" width="557" height="63" border="0" /></p>
 <ol>
-  <li><img src="http://alainna.org/orcid/clip_image021.jpg" alt="" width="234" height="241" align="right" hspace="12" vspace="12" />In the configuration form, enter the following:<br />&nbsp;</li>
+  <li><img src="http://alainna.org/orcid/clip_image021.jpg" alt="" width="250" height="272" align="right" hspace="12" vspace="12" />In the configuration form, enter the following:<br />&nbsp;</li>
 <table border="1" cellspacing="0" cellpadding="0" width="425">
   <tr>
     <td width="162" valign="top"><p><strong>OAuth flow</strong></p></td>
@@ -358,18 +345,18 @@ Section 2: Getting started with the ORCID member API
   </tr>
   <tr>
     <td width="162" valign="top"><p><strong>Access token location</strong></p></td>
-    <td width="263" valign="top"><p>Authorization header    w/Bearer prefix</p></td>
+    <td width="263" valign="top"><p>Authorization header w/Bearer prefix</p></td>
   </tr>
   <tr>
     <td width="162" valign="top"><p><strong>OAuth Client ID</strong></p></td>
-    <td width="263" valign="top"><p>Your Public API client id    (ex: APP-AWPNRAQNO2Y0K3AC)</p></td>
+    <td width="263" valign="top"><p>Your Public API client id (ex: APP-AWPNRAQNO2Y0K3AC)</p></td>
   </tr>
   <tr>
     <td width="162" valign="top"><p><strong>OAuth Client Secret</strong></p></td>
-    <td width="263" valign="top"><p>Your Public API client    secret (ex: 63a7f233-2277-4364-9745-4d5f4b5a0360)</p></td>
+    <td width="263" valign="top"><p>Your Public API client secret (ex: 63a7f233-2277-4364-9745-4d5f4b5a0360)</p></td>
   </tr>
 </table><br />&nbsp;
-  <li>The configuration screen should look similar to the  image at right. After you&rsquo;ve entered the settings, click Close in the  lower-left corner of the configuration screen.<br />
+  <li>The configuration screen should look similar to the image at right. After you&rsquo;ve entered the settings, click Close in the lower-left corner of the configuration screen.<br />
   </li>
 </ol>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
@@ -380,7 +367,7 @@ Section 2: Getting started with the ORCID member API
 <p>Do  not select any of the options from the list beneath <strong>Step 1: Select &amp; authorize APIs</strong>. Instead, type <strong>/authenticate</strong> in the text box.</p>
 <p> <em>The /authenticate scope allows you to  retrieve a user&rsquo;s ORCID iD. This is the only scope available in the Public API.  The Member API, however, permits additional scopes, which we&rsquo;ll explore in the  next section.</em></p>
   <li>Click <strong>Authorize  APIs</strong>.<br />&nbsp;</li>
-  <li><img src="http://alainna.org/orcid/clip_image025.jpg" alt="" width="241" height="198" align="right" hspace="12" vspace="12" />An ORCID OAuth  login screen will appear, requesting that the user grant the permissions  entered in the previous steps. When this screen appears, click <strong>Sign In</strong>, and sign  into your Sandbox account.<br />&nbsp;</li>
+  <li><img src="http://alainna.org/orcid/clip_image025.jpg" alt="" width="275" height="235" align="right" hspace="12" vspace="12" />An ORCID OAuth  login screen will appear, requesting that the user grant the permissions  entered in the previous steps. When this screen appears, click <strong>Sign In</strong>, and sign  into your Sandbox account.<br />&nbsp;</li>
   <li>Click <strong>Authorize</strong> on the ORCID OAuth login screen and you  will be sent back to the OAuth Playground. A 6-character code will appear in  the <strong>Authorization Code</strong> field beneath <strong>Step  2: Exchange authorization codes for tokens</strong>.<br />&nbsp;</li>
 </ol>
 <br clear="all" />
@@ -398,7 +385,7 @@ Section 2: Getting started with the ORCID member API
 <p>As discussed in section  1.1, the Public API can only be used to read and search ORCID records, and to  get authenticated ORCID iDs. The Member API, however, can be used to add new  information to ORCID records, as well as to update information previously  added.</p>
 <h2><a name="5.1"></a>5.1  Accessing the Sandbox Member API</h2>
 <p>As with the Public API,  client credentials consisting of a client ID and a client secret are needed in  order to access the Member API. Public API credentials cannot be used to access  the Member API, so we&rsquo;ll be using a different client ID and secret for the  remainder of this boot camp.</p>
-<p>Client Credentials for the  Member APIs are issued by ORCID. For this boot camp, we have set up Sandbox  Client Credentials for you in advance. In the future, you can obtain Client  Credentials using the request form at <a href="http://orcid.org/content/register-client-application" target="_blank">http://orcid.org/content/register-client-application</a></p>
+<p>Client Credentials for the  Member APIs are issued by ORCID. For this boot camp, you can use the sample Sandbox Client Credentials, but we recommend that you obtain your own Sandbox Client Credentials using the request form at <a href="http://orcid.org/content/register-client-application" target="_blank">http://orcid.org/content/register-client-application</a></p>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 <h2><a name="5.2"></a>5.2 Setting up the OAuth Playground</h2>
 <p>We&rsquo;ll continue to use the  Google Developers&rsquo; OAuth Playground for the next exercises, but a few configuration  changes are needed in order to work with the Member API.</p>
@@ -406,7 +393,7 @@ Section 2: Getting started with the ORCID member API
   <li>Visit <a href="https://developers.google.com/oauthplayground" target="_blank">https://developers.google.com/oauthplayground</a><br />&nbsp; </li>
   <li>Click the gear icon in the upper right corner to open  the configuration form.<br />&nbsp; </li>
 <p><img src="http://alainna.org/orcid/clip_image030.jpg" alt="" width="530" height="60" border="0" /></p>
-<p><img src="http://alainna.org/orcid/clip_image031.jpg" alt="" width="236" height="246" align="right" hspace="12" vspace="12" /></p>
+<p><img src="http://alainna.org/orcid/clip_image031.jpg" alt="" width="275" height="291" align="right" hspace="12" vspace="12" /></p>
   <li>Enter the following:
    <p><em>(Fields edited to work with the Member  API are highlighted; the rest remain the same.)</em></p>
 <table border="1" cellspacing="0" cellpadding="0">
@@ -457,17 +444,17 @@ Section 2: Getting started with the ORCID member API
 <ol>
   <li>Beneath <strong>Step 1:  Select &amp; authorize APIs</strong> on the left side of the screen, type <strong>/orcid-works/create</strong> in the text box (do  not select any of the options in the box above).<br />&nbsp; </li>
   <li>Click <strong>Authorize  APIs</strong>.<br />&nbsp; </li>
-  <li><img src="http://alainna.org/orcid/clip_image035.gif" alt="" width="315" height="111" align="right" hspace="12" vspace="12" />An ORCID OAuth  login screen will appear. Click <strong>Sign In</strong> and sign into your Sandbox account.<br />&nbsp; </li>
+  <li><img src="http://alainna.org/orcid/clip_image035.gif" alt="" width="315" height="136" align="right" hspace="12" vspace="12" />An ORCID OAuth  login screen will appear. Click <strong>Sign In</strong> and sign into your Sandbox account.<br />&nbsp; </li>
   <li>Click <strong>Authorize </strong>on  the ORCID OAuth login screen and you will be sent back to the OAuth Playground.  A 6-character code will appear in the <strong>Authorization  Code </strong>field.<br />&nbsp; </li>
 </ol>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 <h3><a name="6.1.2"></a>6.1.2  Exchange the Authorization Code for an Access Token</h3>
 <p>Once you have an  Authorization Code, you can exchange it for an Access Token, which allows you  to read from/write to a user&rsquo;s ORCID record. In a real-world situation, this  exchange would be done by your system, using a programming language such as  PHP, Java, or Ruby on Rails. With the OAuth Playground, however, this step is  done by clicking a button.</p>
 <ol>
-  <li><img src="http://alainna.org/orcid/clip_image036.gif" alt="" width="336" height="115" align="right" hspace="12" vspace="12" />Beneath the <strong>Authorization Code</strong> field, click <strong>Exchange authorization code for tokens</strong>. <br />&nbsp; </li>
+  <li><img src="http://alainna.org/orcid/clip_image036.gif" alt="" width="336" height="111" align="right" hspace="12" vspace="12" />Beneath the <strong>Authorization Code</strong> field, click <strong>Exchange authorization code for tokens</strong>. <br />&nbsp; </li>
   <li>The token will appear in the <strong>Access Token </strong>field.<br />&nbsp; </li>
   <li>Note that you are provided with additional information  in the <strong>Request/Response </strong>section on  the right side of the screen, such as the name and ORCID iD of the user who  granted permission, the lifespan of the token (20 years), and the scope for  which the token is valid.</li>
-<p><img src="http://alainna.org/orcid/clip_image038.jpg" alt="" width="339" height="110" border="0" /></p>
+<p><img src="http://alainna.org/orcid/clip_image038.jpg" alt="" width="340" height="103" border="0" /></p>
 </ol>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 <h1><a name="7"></a>7. Member  API: Writing to ORCID records via the API</h1>
@@ -487,9 +474,9 @@ Section 2: Getting started with the ORCID member API
     <li><strong>Header value:</strong> application/vnd.orcid+xml<br />&nbsp; </li>
   </ul>
   <li>Click <strong>Add</strong> again, then click <strong>Close</strong>.<br />&nbsp; </li>
-  <li>In the <strong>Request  URI</strong> field, enter https://api.sandbox.orcid.org/v1.2/[orcid-id]/orcid-works,  replacing [orcid-id] with the ORCID iD of the Sandbox record that you created earlier  (ex: https://api.sandbox.orcid.org/v1.2/0000-0002-1223-3173/orcid-works)<br />
+  <li>In the <strong>Request  URI</strong> field, enter https://api.sandbox.orcid.org/v1.2/[orcid-id]/orcid-works,  replacing [orcid-id] with the ORCID iD of the Sandbox record that you created earlier  (ex: https://api.sandbox.orcid.org/v1.2/0000-0002-3791-8427/orcid-works)<br />
     <br />
-    <img src="http://alainna.org/orcid/clip_image042.jpg" alt="" width="392" height="165" border="0" /><br />&nbsp; </li>
+    <img src="http://alainna.org/orcid/clip_image042.jpg" alt="" width="392" height="232" border="0" /><br />&nbsp; </li>
   <li>Click <strong>Enter  request body</strong>. Here is where you&rsquo;ll enter the XML for the works you wish to  add.<br />&nbsp; </li>
   <li>Visit <a href="http://git.io/vITI9" target="_blank">http://git.io/vITI9</a> and copy the XML in the <strong>Sample Work </strong>section.<br />&nbsp; </li>
   <li>Paste the copied content into the <strong>Request Body </strong>text box and click <strong>Close</strong>.<br />
@@ -497,7 +484,7 @@ Section 2: Getting started with the ORCID member API
     <img src="http://alainna.org/orcid/clip_image044.jpg" alt="" width="498" height="275" border="0" /></li><Br />&nbsp;
   <li>Click <strong>Send the  request</strong>.<br />&nbsp; </li>
   <li>The  results will appear in the <strong>Request/Response </strong>section on the right side of the screen. Scroll to the bottom – if you see <strong>HTTP/1.1 201 Created</strong>, the work was  successfully posted!<br />&nbsp; 
-    <img src="http://alainna.org/orcid/clip_image046.jpg" alt="" width="483" height="239" border="0" /><br />&nbsp; </li>
+    <img src="http://alainna.org/orcid/clip_image046.jpg" alt="" width="483" height="224" border="0" /><br />&nbsp; </li>
   <li> Visit the <strong>public  view </strong>of your Sandbox record at http://sandbox.orcid.org/[Your sandbox iD]  to see the work that you added in the user interface.</li>
 </ol>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
@@ -533,7 +520,7 @@ Section 2: Getting started with the ORCID member API
   </li>
   <li>Click <strong>Send the Request</strong>.<br />&nbsp; 
   </li>
-  <li>The  results will appear in the <strong>Request/Response </strong>section on the right side of the screen. If the full XML of the user&rsquo;s  record appears, the work was successfully updated!<br />&nbsp; 
+  <li>The  results will appear in the <strong>Request/Response </strong>section on the right side of the screen. If the full XML of the user&rsquo;s  record appears, the work was successfully updated!<br />If you receive an error, be sure to check that the headers value under <b>Add headers</b> have not been changed to garbled text, e.g. "application%2Fvnd.orcid%2Bxml".<br />&nbsp; 
   </li>
   <li>Visit  the public view of your Sandbox record at http://sandbox.orcid.org/[Your  sandbox iD] to see the changes to the work in the user interface.</li>
 </ol>
