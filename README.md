@@ -209,7 +209,7 @@
 <h2><a name="3.2"></a>3.2 Searching  Public Record Data</h2>
 <p>In addition to retrieving  an individual&rsquo;s entire ORCID record, the Public API can be used to search for  all records whose public data contain particular search terms.</p>
 <p> Note that only a portion of  the ORCID record is returned for each matching result. To view the entire record,  use the Public API to retrieve the record, as in section 3.1.</p>
-<p> This tutorial provides a  very brief introduction to searching with the API. For much more information,  see <a href="https://members.orcid.org/api/tutorial-searching-api-12-and-earlier">https://members.orcid.org/api/tutorial-searching-api-12-and-earlier</a></p>
+<p> This tutorial provides a  very brief introduction to searching with the API. For much more information,  see <a href="https://members.orcid.org/api/tutorial-searching-data-using-api">https://members.orcid.org/api/tutorial-searching-data-using-api</a></p>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 <h3><a name="3.2.1"></a>3.2.1 Basic  Keyword Search</h3>
 <p>A basic keyword search  performs a full-text search of all publicly-visible information in users&rsquo; ORCID  records (Names, ORCID iDs, and any other data with a privacy setting of  &ldquo;Everyone&rdquo;).</p>
@@ -272,7 +272,7 @@
   <li>External Identifiers (DOIs, PMIDs, etc.)</li>
   <li>Creation/Last Modified Dates</li>
 </ul>
-<p>For a complete list, see <a href="http://members.orcid.org/api/tutorial-searching-api-12-and-earlier" target="_blank">http://members.orcid.org/api/tutorial-searching-api-12-and-earlier</a></p>
+<p>For a complete list, see <a href="https://members.orcid.org/api/tutorial-searching-data-using-api" target="_blank">https://members.orcid.org/api/tutorial-searching-data-using-api</a></p>
 <ol>
   <li>Beneath <strong>Step 3:  Configure request to API</strong> on the left side of the screen, enter the  following:<br />&nbsp;</li>
 <table border="1" cellspacing="0" cellpadding="0" width="576">
@@ -341,7 +341,7 @@
   </tr>
   <tr>
     <td width="162" valign="top"><p><strong>Token endpoint</strong></p></td>
-    <td width="263" valign="top"><p>https://pub.sandbox.orcid.org/oauth/token</p></td>
+    <td width="263" valign="top"><p>https://sandbox.orcid.org/oauth/token</p></td>
   </tr>
   <tr>
     <td width="162" valign="top"><p><strong>Access token location</strong></p></td>
@@ -385,7 +385,7 @@
 <p>As discussed in section  1.1, the Public API can only be used to read and search ORCID records, and to  get authenticated ORCID iDs. The Member API, however, can be used to add new  information to ORCID records, as well as to update information previously  added.</p>
 <h2><a name="5.1"></a>5.1  Accessing the Sandbox Member API</h2>
 <p>As with the Public API,  client credentials consisting of a client ID and a client secret are needed in  order to access the Member API. Public API credentials cannot be used to access  the Member API, so we&rsquo;ll be using a different client ID and secret for the  remainder of this boot camp.</p>
-<p>Client Credentials for the  Member APIs are issued by ORCID. For this boot camp, you can use the sample Sandbox Client Credentials, but we recommend that you obtain your own Sandbox Client Credentials using the request form at <a href="http://orcid.org/content/register-client-application" target="_blank">http://orcid.org/content/register-client-application</a></p>
+<p>Client Credentials for the  Member APIs are issued by ORCID. For this boot camp, you can use the sample Sandbox Client Credentials, but we recommend that you obtain your own Sandbox Client Credentials using the request form at <a href="https://orcid.org/content/register-client-application" target="_blank">https://orcid.org/content/register-client-application</a></p>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 <h2><a name="5.2"></a>5.2 Setting up the OAuth Playground</h2>
 <p>We&rsquo;ll continue to use the  Google Developers&rsquo; OAuth Playground for the next exercises, but a few configuration  changes are needed in order to work with the Member API.</p>
@@ -411,7 +411,7 @@
   </tr>
   <tr>
     <td width="158" valign="top"><p><strong>Token endpoint</strong></p></td>
-    <td valign="top"><p><strong>https://api.sandbox.orcid.org/oauth/token</strong></p></td>
+    <td valign="top"><p><strong>https://sandbox.orcid.org/oauth/token</strong></p></td>
   </tr>
   <tr>
     <td width="158" valign="top"><p><strong>Access token location</strong></p></td>
@@ -442,7 +442,7 @@
 <h3><img src="http://alainna.org/orcid/clip_image033.jpg" alt="" width="288" height="177" align="right" hspace="12" vspace="12" /><a name="h.uzsp2l9oif0z" id="h.uzsp2l9oif0z"></a>6.1.1 Get an Authorization Code</h3>
 <p>To get an Authorization  Code, you&rsquo;ll need to prompt the user to log into his/her ORCID account and  grant permission to your application. In a real-world situation, this is done  using an authorization URL that you construct. With the OAuth Playground, however,  this step is done by configuring some additional settings and clicking a  button.</p>
 <ol>
-  <li>Beneath <strong>Step 1:  Select &amp; authorize APIs</strong> on the left side of the screen, type <strong>/orcid-works/create</strong> in the text box (do  not select any of the options in the box above).<br />&nbsp; </li>
+  <li>Beneath <strong>Step 1:  Select &amp; authorize APIs</strong> on the left side of the screen, type <strong>/activities/update</strong> in the text box (do  not select any of the options in the box above).<br />&nbsp; </li>
   <li>Click <strong>Authorize  APIs</strong>.<br />&nbsp; </li>
   <li><img src="http://alainna.org/orcid/clip_image035.gif" alt="" width="315" height="136" align="right" hspace="12" vspace="12" />An ORCID OAuth  login screen will appear. Click <strong>Sign In</strong> and sign into your Sandbox account.<br />&nbsp; </li>
   <li>Click <strong>Authorize </strong>on  the ORCID OAuth login screen and you will be sent back to the OAuth Playground.  A 6-character code will appear in the <strong>Authorization  Code </strong>field.<br />&nbsp; </li>
@@ -489,7 +489,7 @@
 </ol>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 <h2><a name="7.2"></a>7.2 Updating  a Work</h2>
-<p>In the last section, we  asked the user for permission to add a new work to their ORCID record using the  /orcid-works/create scope. To edit that same work, we need to request  permission using the /orcid-works/update scope. </p>
+<p>In the last section, we  asked the user for permission to add a new work to their ORCID record using the  /activities/update scope. To edit that same work, we need to request  permission using the /orcid-works/update scope. </p>
 <p> In a real-world situation,  create and update permissions can be requested in the same step, resulting in  an Access Token that can be used to both add and edit works. When using the  OAuth Playground, however, we can only request permission for one scope at a  time, so we&rsquo;ll need to generate a new Access Token in order to edit the work  that we just added.</p>
 <ol>
   <li>Beneath <strong>Step 1:  Select &amp; authorize APIs</strong>, type <strong>/orcid-works/update</strong> in the text box.<br />&nbsp; </li>
@@ -527,8 +527,8 @@
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 <h1><a name="8"></a>8. BONUS: Member API: Creating New Records</h1>
 <p>Organizations are often  interested in creating ORCID records on behalf of their faculty, staff, or  students. The ORCID API supports this through a create on demand process that  allows users to create a new record at any time, and to grant your system  read/write access to their record (via the API). Users who already have an  ORCID iD can use the same process to send their existing iD to your system and  grant your system read/write access.</p>
-<p> See a demo of this process  at: <a href="https://orcid-create-on-demand.herokuapp.com/" target="_blank">https://orcid-create-on-demand.herokuapp.com</a></p>
-<p>  In this section, we&rsquo;ll walk  through the basic steps to implement a create on demand process. For more  information, see <a href="http://members.orcid.org/create-records">http://members.orcid.org/create-records</a></p>
+<p> See a demo of this process  at: <a href="https://orcid-createondemand.herokuapp.com/" target="_blank">https://orcid-createondemand.herokuapp.com</a></p>
+<p>  In this section, we&rsquo;ll walk  through the basic steps to implement a create on demand process. For more  information, see <a href="https://members.orcid.org/create-records">https://members.orcid.org/create-records</a></p>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 <h2><a name="8.1"></a>8.1  Construct the Authorization URL</h2>
 <p>The create on demand  process begins with a special authorization URL that you construct. The URL includes your ORCID API client credentials and information about any read/write  permissions that you&rsquo;d like to request from the user.</p>
@@ -558,8 +558,8 @@
     </tr>
     <tr>
       <td width="158" valign="top"><p><strong>scope</strong></p></td>
-      <td width="453" valign="top"><p>The read/write    permission(s) you wish to request from the user, from the <strong><a href="http://members.orcid.org/api/orcid-scopes" target="_blank">ORCID Scopes list</a></strong>   </p>
-        <p> If including multiple permissions, separate them with an HTML-encoded space (%20), ex:  /orcid-works/create%20/orcid-works/update</p>
+      <td width="453" valign="top"><p>The read/write    permission(s) you wish to request from the user, from the <strong><a href="https://members.orcid.org/api/orcid-scopes" target="_blank">ORCID Scopes list</a></strong>   </p>
+        <p> If including multiple permissions, separate them with an HTML-encoded space (%20), ex:  /activities/update%20/read-limited</p>
         <p> <em>At minimum, /authenticate needs to be    included, which allows you to obtain the user&rsquo;s ORCID iD.</em></p></td>
     </tr>
     <tr>
@@ -577,7 +577,7 @@
   <li>In your text editor, add the required parameters to  your base URL, as in the example below. Make sure to replace the Client ID with  your assigned Client ID!</li>
 <p><strong>https://sandbox.orcid.org/oauth/authorize?<br />
   client_id=APP-E422WM33OPZWKKMQ&amp;<br />
-  scope=/orcid-works/create%20/orcid-works/update&amp;<br />
+  scope=/activities/update%20/read-limited&amp;<br />
   response_type=code&amp;<br />
   redirect_uri=https://developers.google.com/oauthplayground</strong></p>
 </ol>
@@ -617,7 +617,7 @@
   <li><img width="195" height="119" src="http://alainna.org/orcid/clip_image047.gif" align="right" hspace="12" vspace="5" alt="Text Box: IMPORTANT!." />In your text editor, add some  optional parameters to pre-fill the registration form. Your final authorization  URL should like something like:</li>
 <p><strong>https://sandbox.orcid.org/oauth/authorize?<br />
   client_id=APP-E422WM33OPZWKKMQ&amp;<br />
-  scope=/orcid-works/create%20/orcid-works/update&amp;<br />
+  scope=/activities/update%20/read-limited&amp;<br />
   response_type=code&amp;<br />
   redirect_uri=https://developers.google.com/oauthplayground&amp;<br />
   family_names=Orcidson&amp;<br />
@@ -637,8 +637,8 @@
   <li><strong>Store  </strong>the Access Token and ORCID iD  (e.g. in a database) for use in future use.</li>
 </ol>
 <p>See an example in PHP at: <a href="https://github.com/lizkrznarich/orcid-demo-app" target="_blank">https://github.com/lizkrznarich/orcid-demo-app</a></p>
-<p>  For more examples  contributed by ORCID members, see: <a href="http://members.orcid.org/api/code-examples" target="_blank">http://members.orcid.org/api/code-examples</a></p>
-<p><strong><em>Note: </em></strong><em>If you simply want to promote ORCID  creation, but don&rsquo;t need to collect users&rsquo; ORCID iDs or Access Tokens, you can  create a static HTML redirect page that does not perform an authorization code  exchange.</em></p>
+<p>  For more examples  contributed by ORCID members, see: <a href="https://members.orcid.org/api/code-examples" target="_blank">https://members.orcid.org/api/code-examples</a></p>
+<p><strong><em>Note:</strong> If you simply want to promote ORCID  creation, but don&rsquo;t need to collect users&rsquo; ORCID iDs or Access Tokens, you can  create a static HTML redirect page that does not perform an authorization code  exchange.</em></p>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 <h2><a name="8.3"></a>8.3 Prompt  Users to Create or Connect their ORCID iD</h2>
 <p>Once you&rsquo;ve created an  authorization URL and a redirect page, the next step is to prompt users to  click the authorization URL. To do this, you can:</p>
@@ -681,7 +681,7 @@
     </tr>
     <tr>
       <td width="158" valign="top"><p><strong>Token endpoint</strong></p></td>
-      <td width="412" valign="top"><p>https://api.sandbox.orcid.org/oauth/token</p></td>
+      <td width="412" valign="top"><p>https://sandbox.orcid.org/oauth/token</p></td>
     </tr>
     <tr>
       <td width="158" valign="top"><p><strong>Access token location</strong></p></td>
