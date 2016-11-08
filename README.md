@@ -297,8 +297,9 @@
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 <h3><a name="3.2.4"></a>3.2.4. More searches to try!</h3>
 <ol>
-  <li><strong>Search for records with the email domain @orcid.org:</strong><br />
-    https://pub.sandbox.orcid.org/v1.2/search/orcid-bio/?q=email:*@orcid.org<br />&nbsp;</li>
+  <li><strong>Search for records with the email domain @orcid.org, and display the first 100 results:</strong><br />
+    https://pub.sandbox.orcid.org/v1.2/search/orcid-bio/?q=email:*@orcid.org&start=1&rows=100<br />
+    <em>Note: The API search will only display up to 100 rows -- results -- at a time. If the results are greater than 100, you will need to change the start to 101 to get the next 100 results, then 201, etc.</em><br />&nbsp;</li>
   <li><strong>Search for  records associated with the exact DOI 10.1087/20120404:</strong><br />
     https://pub.sandbox.orcid.org/v1.2/search/orcid-bio/?q=digital-object-ids:%2210.1087/20120404%22<br />&nbsp;</li>
   <li><strong>Search for  records modified between May 6, 2015 and today:</strong><br />
