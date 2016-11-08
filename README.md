@@ -295,8 +295,10 @@
   <li>XML for matching records appears in the <strong>Request/Response</strong> section on the right.</li>
 </ol>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
-<h3><a name="3.2.4"></a>3.2.4. More  searches to try!</h3>
+<h3><a name="3.2.4"></a>3.2.4. More searches to try!</h3>
 <ol>
+  <li><strong>Search for records with the email domain @orcid.org:</strong><br />
+    https://pub.sandbox.orcid.org/v1.2/search/orcid-bio/?q=email:*@orcid.org<br />&nbsp;</li>
   <li><strong>Search for  records associated with the exact DOI 10.1087/20120404:</strong><br />
     https://pub.sandbox.orcid.org/v1.2/search/orcid-bio/?q=digital-object-ids:%2210.1087/20120404%22<br />&nbsp;</li>
   <li><strong>Search for  records modified between May 6, 2015 and today:</strong><br />
