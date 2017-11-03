@@ -1,7 +1,10 @@
 # VALA2016 ORCID Boot Camp
 ## Hands on with the ORCID API 
 
-<p>This boot camp provides a hands-on tutorial for using the ORCID Member and Public APIs. </p>
+<p>This boot camp provides a hands-on tutorial for using the ORCID Member and Public APIs using API 1.2. </p>
+
+# For a hands-on overview of API 2.0, see [niso-workshop-2017](https://github.com/ORCID/niso-workshop-2017)
+
 --
 <h1><a name="top"></a>Contents</h1>
 <p><a href="#1">1. About the ORCID APIs</a></p>
