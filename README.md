@@ -1,7 +1,7 @@
 # VALA2016 ORCID Boot Camp
 ## Hands on with the ORCID API 
 
-<p>This boot camp provides a hands-on tutorial for using the ORCID Member and Public APIs using API 1.2. For a hands-on overview of API 2.0, see [ORCID API tutorial](https://orcid.github.io/orcid-api-tutorial). </p>
+<p>This boot camp provides a hands-on tutorial for using the ORCID Member and Public APIs using API 1.2. For a hands-on overview of ORCID API 2.0+, see **ORCID API tutorial**: https://orcid.github.io/orcid-api-tutorial </p>
 
 <h1><a name="top"></a>Contents</h1>
 <p><a href="#1">1. About the ORCID APIs</a></p>
